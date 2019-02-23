@@ -8,8 +8,10 @@ import { EmployeesComponent } from './dashboard/employees/employees.component';
 import { ClientsComponent } from './dashboard/clients/clients.component';
 import { HomeDashComponent } from './dashboard/home-dash/home-dash.component';
 import { DemandeDevisComponent } from './demande-devis/demande-devis.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'demande', component: DemandeDevisComponent },
   {

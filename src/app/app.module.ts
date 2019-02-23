@@ -14,6 +14,7 @@ import { EmployeesComponent } from './dashboard/employees/employees.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeDashComponent } from './dashboard/home-dash/home-dash.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

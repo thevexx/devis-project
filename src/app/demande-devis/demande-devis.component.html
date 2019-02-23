@@ -1,3 +1,151 @@
-<p>
-  demande-devis works!
-</p>
+<nav class="navbar navbar-light bg-light static-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">Devis</a>
+    <div>
+      <a class="btn btn-primary ml-3" routerLink="/demande">Demande de Devis</a>
+      <a class="btn btn-secondary ml-3" routerLink="/login">Se connecter</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-xl-12 mx-auto">
+      <div class="card card-signin flex-row my-5">
+        <div class="card-img-left d-none d-md-flex">
+          <!-- Background image for card set in CSS! -->
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Register</h5>
+          <form class="form-signin" [formGroup]="devisForm">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-label-group">
+                  <input type="text" id="inputFirstname" formControlName="name" class="form-control"
+                    placeholder="Firstname" required autofocus>
+                  <label for="inputFirstname">Firstname</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-label-group">
+                  <input type="text" id="inputLastname" formControlName="lastname" class="form-control"
+                    placeholder="Lastname" required autofocus>
+                  <label for="inputLastname">Lastname</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-label-group">
+                  <input type="text" id="inputEmail" formControlName="email" class="form-control" placeholder="Email"
+                    required autofocus>
+                  <label for="inputEmail">Email</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-label-group">
+                  <input type="text" id="inputTel" formControlName="tel" class="form-control" placeholder="Tel" required
+                    autofocus>
+                  <label for="inputTel">Tel</label>
+                </div>
+              </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-label-group">
+                  <input type="text" id="inputCompany" formControlName="company" class="form-control"
+                    placeholder="Nom de la société" required autofocus>
+                  <label for="inputCompany">Nom de la société</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-label-group">
+                  <input type="text" id="inputAdresse" formControlName="address" class="form-control"
+                    placeholder="Adresse" required autofocus>
+                  <label for="inputAdresse">Adresse</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-label-group">
+                  <!-- <input type="radio" id="inputType" formControlName="type" class="form-control"
+                    placeholder="Type de Devis" required autofocus>
+                  <label for="inputType">Type de Devis</label> -->
+                  <!-- <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="" id="" value="checkedValue"> Display value
+                      <input class="form-check-input" type="radio" name="" id="" value="checkedValue"> Display value
+                    </label>
+                  </div> -->
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary active"> Produit
+                      <input type="radio" name="type" id="" autocomplete="off" checked>
+                    </label>
+                    <label class="btn btn-secondary"> Service
+                      <input type="radio" name="type" id="" autocomplete="off">
+                    </label>
+                  </div>
+
+                  <!-- <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="" id="" value="checkedValue" checked>
+                      Display value
+                    </label>
+                  </div> -->
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-label-group">
+                  <input type="text" id="inputService" formControlName="serviceType" class="form-control"
+                    placeholder="Type de Service" required autofocus>
+                  <label for="inputService">Type de Service</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-label-group">
+              <textarea id="inputDescription" rows="4" formControlName="description" class="form-control"
+                placeholder="Description" required>
+                </textarea>
+              <!-- <label for="inputDescription">Description</label> -->
+            </div>
+
+            <div class="row">
+              <div class="col-6 mx-auto">
+                <div class="form-label-group">
+                  <input type="date" id="inputDescription" formControlName="dateLimit" class="form-control"
+                    placeholder="Date limite de la demande" required>
+                  <label for="inputDescription">Date limite de la demande</label>
+                </div>
+              </div>
+            </div>
+
+            <!--
+            <hr>
+
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <label for="inputPassword">Password</label>
+            </div>
+
+            <div class="form-label-group">
+              <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+              <label for="inputConfirmPassword">Confirm password</label>
+            </div> -->
+
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Envoyer la demande</button>
+            <!-- <a class="d-block text-center mt-2 small" href="#">Sign In</a> -->
+            <!--
+            <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                class="fab fa-google mr-2"></input> Sign up with Google</button>
+            <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

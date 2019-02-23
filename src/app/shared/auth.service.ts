@@ -15,4 +15,9 @@ export class AuthService {
   register(user) {
     return this.http.post('http://localhost:3000/auth/register', user);
   }
+
+
+  createDevis(devis) {
+    return this.http.post('http://localhost:3000/devis', devis);
+  }
 }
